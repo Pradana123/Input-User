@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>InputUser_Pradana_26</title>
+		<script type="text/javascript">
+		
+		 function ambilData() {
+
+		var nama = document.getElementById("nama").value; 
+        document.getElementById("demo1").innerHTML = nama; 
+		
+		var email = document.getElementById("email").value; 
+        document.getElementById("demo2").innerHTML = email;
+
+        var negara = document.getElementsByName("negara");
+        document.getElementById("demo3").innerHTML = negara;
+
+        var tanggal = document.getElementsByName("tanggal");
+        document.getElementById("demo4").innerHTML = tanggal;
+		 
+        var jenis = new Array(); 
+        var jenis = document.getElementsByName("gender"); 
+        
+        if (jenis[0].checked === true)
+                var j = jenis[0].value; 
+            else if (jenis[1].checked === true)   
+                var j = jenis[1].value; 
+            else 
+                var j = "Anda belum memilih"; 
+                document.getElementById("demo5").innerHTML = j; 
+        } 
+
+		</script>
+	</head>
+	<body>
+		<h1>Kelas/No.Absen</h1>
+		<br>
+		<h2>Pendaftaran hiGirls!</h2>
+		<br>
+		<label>Nama  : </label>
+		<input type="text" id="nama" placeholder="Masukkan Nama">
+		<br>
+		<br>
+		<label>Email : </label>
+		<input type="text" id="email" placeholder="Masukkan Email">
+		<br>
+		<br>
+		<label>Negara : </label>
+		<select name="negara">
+			<option id="negara" value="Indonesia">Indonesia</option>
+			<option id="negara" value="Singapore">Singapore</option>
+			<option id="negara" value="Malaysia">Malaysia</option>	
+		</select>
+		<br>
+		<br>
+		<label>Tanggal Lahir : </label>
+		<select name="tanggal">
+			<option value="2001">2001</option>
+			<option value="2002">2002</option>
+			<option value="2003">2003</option>
+			<option value="2004">2004</option>
+			<option value="2005">2005</option>
+			<option value="2006">2006</option>
+			<option value="2007">2007</option>
+			<option value="2008">2008</option>
+		</select>
+		<br>
+		<br>
+		<label>Gender : </label>
+		<br>
+		<input type="radio" name="gender" value="Pria">Pria<br>
+		<input type="radio" name="gender" value="Wanita">Wanita<br>	
+		<input type="radio" name="gender" value="Tak Terdefinisi">Tak Terdefinisi<br> 
+		<br>
+		<button onclick="ambilData()">Daftar</button>
+		<p id="demo1"></p>
+		<p id="demo2"></p>
+		<p id="demo3"></p>
+		<p id="demo4"></p>
+		<p id="demo5"></p>
+	</body>
+	</html>
+		
